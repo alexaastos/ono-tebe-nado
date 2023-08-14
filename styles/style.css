@@ -44,7 +44,68 @@ address {
     flex-direction: column;
 }
 
+.cover {
+    position: relative;
+    inset: 0;
+    z-index: 0;
+    box-sizing: border-box;
+    margin: 0;
+    max-width: fit-content;
+    max-height: fit-content;
+}
 
+.overlay {
+    position: absolute;
+    opacity: 0.6;
+    background: #000;
+    inset: 0;
+    z-index: 1;
+}
+
+.cover__title {
+    color: #FFF;
+    margin: 0;
+    font-family: Raleway;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 115%; /* 115px */
+    letter-spacing: 30px;
+    text-transform: uppercase;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "one . . ."
+    ". two . ."
+    ". . three ."
+    ". four four four"
+}
+
+.aligned-text {
+    padding-left: 50px;
+    grid-area: one;
+}
+
+.aligned-text_center {
+    grid-area: two;
+}
+
+.aligned-text_right {
+    grid-area: three;
+}
+
+.cover__description {
+    font-size: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
+    grid-area: four;
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
 
 .lots {
     padding-top: 180px;
