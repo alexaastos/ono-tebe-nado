@@ -80,8 +80,8 @@ address {
     ". . . . . ."
     ". one . . . ."
     ". . two . . ."
-    ". . . three . ."
-    ". four four four . ."
+    ". . . . three ."
+    ". . four four four ."
 }
 
 .aligned-text {
@@ -111,6 +111,7 @@ address {
     line-height: 28px; /* 127.273% */
     text-transform: uppercase;
     letter-spacing: 1px;
+    gap: 20px;
 }
 
 .bet-button {
