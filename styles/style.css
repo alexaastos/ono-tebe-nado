@@ -34,11 +34,15 @@ section {
 
 .header__links-list {
     display: flex;
-    gap: 30px;
+    gap: 33px;
 }
 
 .header__links-list-item_no-bullit {
     list-style-type: none;
+}
+
+.header__link_active {
+    text-underline-offset: 4px;
 }
 
 .header__link {
@@ -60,6 +64,13 @@ address {
     flex-direction: column;
     justify-content: flex-end;
     gap: 3px;
+    font-style: normal;
+    color: #000;
+    font-family: Raleway;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    text-underline-offset: 4px;
 }
 
 .header__address {
@@ -72,9 +83,14 @@ address {
     z-index: 0;
     box-sizing: border-box;
     margin: 0;
-    max-width: fit-content;
-    max-height: fit-content;
+    width: 1440px;
+    height: 757px;
     color: #FFF;
+}
+
+.imgcover {
+    width: 1440px;
+    height: 757px;
 }
 
 .overlay {
@@ -86,39 +102,46 @@ address {
 }
 
 .cover__title {
-    margin: 0;
-    font-family: Raleway;
-    font-size: 80px;
-    font-weight: 700;
-    line-height: 115%; /* 115px */
-    text-transform: uppercase;
+    margin: 165px 50px 5px 50px;
     position: absolute;
     inset: 0;
     z-index: 2;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     grid-template-areas:
-    ". . . . . ."
-    ". one . . . ."
-    ". . two . . ."
-    ". . . . three ."
-    ". . four four four ."
+    "one one . . . . . . "
+    "one one . . . . . . "
+    ". . . two two . . ."
+    ". . . two two . . ."
+    ". . . . . . three three "
+    ". . . . . . three three "
+    " . . . . . . . ."
+    " . . four four four four four four"
 }
 
 .aligned-text {
     grid-area: one;
-    letter-spacing: 20px;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 30px;
+    text-transform: uppercase;
 }
 
 .aligned-text_center {
     grid-area: two;
-    letter-spacing: 20px;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 30px;
+    text-transform: uppercase;
 }
 
 .aligned-text_right {
     grid-area: three;
-    letter-spacing: 20px;
+    font-size: 100px;
+    font-weight: 700;
+    letter-spacing: 30px;
+    text-transform: uppercase;
 }
 
 .cover__description {
@@ -147,10 +170,12 @@ address {
 }
 
 .lots {
-    padding-top: 180px;
-    padding-bottom: 181px;
-    padding-right: 50px;
-    padding-left: 50px;
+    margin-top: 180px;
+    margin-bottom: 181px;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 1340px;
+    height: 579px;
 }
 
 .lots__heading {
@@ -159,21 +184,22 @@ address {
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-    padding-bottom: 27px;
+    margin-bottom: 27px;
+    margin-left: 40px;
 }
 
 .lots__card-list {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-areas:
-    " . lot lot lot ."
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+    margin-bottom: 30px;
 }
 
 .lots__card-list-item {
     position: relative;
     inset: 0;
-    grid-area: lot;
+    width: 430px;
+    height: 450px;
 }
 
 .card {
@@ -181,10 +207,10 @@ address {
     inset: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 40px;
+    justify-content: space-between;
+    margin: 0;
     z-index: 3;
+    padding: 50px 40px;
 }
 
 .card__title {
@@ -201,12 +227,51 @@ address {
     font-size: 20px;
     font-weight: 400;
     line-height: 120%; /* 24px */
+    width: 350px;
+}
+
+.lots__look-more-link {
+    margin-left: 40px;
+    color: #000;
+    font-family: Raleway;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-underline-offset: 4px;
 }
 
 .about {
-    padding-bottom: 180px;
-    padding-right: 50px;
-    padding-bottom: 50px;
+    margin-bottom: 180px;
+    margin-right: 50px;
+    margin-left: 50px;
+    width: 1340px;
+    height: 487px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+    "aboutone abouttwo abottwo"
+    " . abouttwo abouttwo"
+}
+
+.about__logo {
+    width: 240px;
+    height: 240px;
+    background-color: #000;
+    border-radius: 50%;
+    margin-right: 95px;
+    margin-left: 95px;
+    position: relative;
+    inset: 0;
+}
+
+.about__logo-image {
+    position: absolute;
+    inset: 0;
+    width: 148px;
+    height: 114px;
+    margin: 63px 46px;
 }
 
 footer {
