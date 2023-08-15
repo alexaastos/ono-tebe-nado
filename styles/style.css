@@ -8,18 +8,33 @@ section {
 
 .header {
     font-weight: 400;
-    padding-top: 92px;
-    padding-right: 49px;
-    padding-left: 51px;
-    padding-bottom: 92px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    font-size: 18px;
+    width: 1340px;
+    height: 109px;
+    margin: 92px 49px 92px 51px;
+    display: grid;
+    grid-template-columns: repeat(22, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-areas:
+    " . . . . . . . . . . htwo htwo . . . . . . . . . ."
+    " . . . . . . . . . . htwo htwo . . . . . . hthree hthree hthree hthree"
+    " . . . . . . . . . . htwo htwo . . . . . . hthree hthree hthree hthree"
+    " . . . . . . . . . . htwo htwo . . . . . . hthree hthree hthree hthree"
+    " . . . . . . . . . . htwo htwo . . . . . . hthree hthree hthree hthree"
+    " hone hone hone hone hone hone hone . . . htwo htwo . . . . . . hthree hthree hthree hthree"
+    " . . . . . . . . . . htwo htwo . . . . . . hthree hthree hthree hthree"
+    " . . . . . . . . . . htwo htwo . . . . . . hthree hthree hthree hthree"
+    " . . . . . . . . . . htwo htwo . . . . . . hthree hthree hthree hthree"
+    " . . . . . . . . . . htwo htwo . . . . . . hthree hthree hthree hthree"
+}
+
+.header__menu {
+    grid-area: hone;
 }
 
 .header__links-list {
     display: flex;
-    gap: 32px;
+    gap: 30px;
 }
 
 .header__links-list-item_no-bullit {
@@ -35,13 +50,20 @@ section {
 }
 
 .header__logo {
-    width: 148px;
-    height: 105px;
+    grid-area: htwo;
+    width: 140px;
+    height: auto;
 }
 
 address {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    gap: 3px;
+}
+
+.header__address {
+    grid-area: hthree;
 }
 
 .cover {
@@ -141,18 +163,17 @@ address {
 }
 
 .lots__card-list {
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    position: relative;
-    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas:
+    " . lot lot lot ."
 }
 
 .lots__card-list-item {
-    max-width: fit-content;
-    max-height: fit-content;
-    position: absolute;
+    position: relative;
     inset: 0;
+    grid-area: lot;
 }
 
 .card {
