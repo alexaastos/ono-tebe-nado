@@ -63,7 +63,7 @@ address {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 3px;
+    gap: 5px;
     font-style: normal;
     color: #000;
     font-family: Raleway;
@@ -102,61 +102,90 @@ address {
 }
 
 .cover__title {
-    margin: 165px 50px 5px 50px;
+    margin: 165px 50px 237px 50px;
+    display: flex;
     position: absolute;
     inset: 0;
     z-index: 2;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    grid-template-areas:
-    "one one . . . . . . "
-    "one one . . . . . . "
-    ". . . two two . . ."
-    ". . . two two . . ."
-    ". . . . . . three three "
-    ". . . . . . three three "
-    " . . . . . . . ."
-    " . . four four four four four four"
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .aligned-text {
-    grid-area: one;
-    font-size: 100px;
+    width: 1340px;
+    height: 115px;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    inset: 0;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 70px;
     font-weight: 700;
-    letter-spacing: 30px;
+    letter-spacing: 25px;
     text-transform: uppercase;
+    gap: 25px;
 }
 
 .aligned-text_center {
-    grid-area: two;
-    font-size: 100px;
+    width: 1270px;
+    height: 100px;
+    z-index: 3;
+    margin-top: 120px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 70px;
     font-weight: 700;
-    letter-spacing: 30px;
+    letter-spacing: 29px;
     text-transform: uppercase;
+    gap: 25px;
 }
 
 .aligned-text_right {
-    grid-area: three;
-    font-size: 100px;
+    width: 1340px;
+    height: 100px;
+    margin-top: 260px;
+    z-index: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    color: #FFF;
+    font-family: Raleway;
+    font-size: 70px;
     font-weight: 700;
-    letter-spacing: 30px;
+    letter-spacing: 29px;
     text-transform: uppercase;
+    gap: 25px;
+    margin-left: 35px;
+    margin-right: 50px;
 }
 
 .cover__description {
     font-weight: 400;
     text-transform: uppercase;
-    grid-area: four;
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: baseline;
     font-family: Raleway;
-    font-size: 22px;
-    line-height: 28px; /* 127.273% */
+    font-size: 23px;
+    line-height: 34px; /* 127.273% */
     text-transform: uppercase;
+    gap: 80px;
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    margin-top: 491px;
+    margin-left: 366px;
+    word-spacing: 7px;
     letter-spacing: 1px;
-    gap: 20px;
 }
 
 .bet-button {
@@ -167,6 +196,10 @@ address {
     font-size: 22px;
     font-weight: 400;
     text-transform: uppercase;
+}
+
+.abet {
+    text-decoration: none;
 }
 
 .lots {
@@ -363,7 +396,7 @@ footer {
     justify-content: space-around;
     align-items: center;
     padding: 0;
-    gap: 40px;
+    gap: 45px;
 }
 
 .footer__social-icon {
