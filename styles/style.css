@@ -200,10 +200,10 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 50px 40px;
     position: relative; 
     inset: 0;
     z-index: 2;
-    padding: 50px 40px;
 }
 
 .card_type_film {
